@@ -1,4 +1,5 @@
 import {Counter} from '../../components/Counter';
+import { SearchForm } from '../../components/SearchForm';
 
 import './App.css';
 
@@ -9,6 +10,7 @@ export const App = () => {
 
       <div className='content'>
         <Counter/>
+        <SearchForm/>
       </div>
     </div>
   );
