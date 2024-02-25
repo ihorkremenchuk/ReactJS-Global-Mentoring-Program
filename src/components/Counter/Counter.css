@@ -1,0 +1,11 @@
+.counter {
+  margin: 0 25px;
+  padding: 10px;
+  display: inline-block;
+  border: 1px solid gray;
+  background-color: #c9c9c9;
+}
+
+.count {
+  padding: 5px;
+}
