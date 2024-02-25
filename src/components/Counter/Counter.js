@@ -1,26 +1,35 @@
-import { useState, createElement } from 'react';
+import React, { createElement } from 'react';
 
 import { Button } from '../../elements/Button';
 
 import './Counter.css';
 
-export const Counter = () => {
-  const [counter, updateCounter] = useState(0);
+export class Counter extends React.Component {
+  constructor() {
+    super();
+    this.state = {counter: 0};
+  }
 
-  const handleIncrement = () => {
-    updateCounter(counter + 1);
+  handleIncrement = () => {
+    this.setState((prevState) => ({
+      counter: prevState.counter++
+    })); 
   };
 
-  const handleDecrement = () => {
-    updateCounter(counter <= 0 ? 0 : counter - 1);
+  handleDecrement = () => {
+    this.setState((prevState, props) => ({
+      counter: props.counter <= 0 ? 0 : prevState.counter++
+    }));
   };
 
-  return createElement(
-    'div',
-    { className: 'counter' },
-    createElement('h2', null, 'Counter:'),
-    createElement(Button, { onClick: handleDecrement }, '-'),
-    createElement('span', {className: 'count'}, counter),
-    createElement(Button, { onClick: handleIncrement }, '+'),
-  );
+  render() {
+    return createElement(
+      'div',
+      { className: 'counter' },
+      createElement('h2', null, 'Counter:'),
+      createElement(Button, { onClick: this.handleDecrement }, '-'),
+      createElement('span', {className: 'count'}, this.counter),
+      createElement(Button, { onClick: this.handleIncrement }, '+'),
+    );
+  }
 }
