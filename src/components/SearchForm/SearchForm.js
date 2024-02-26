@@ -1,8 +1,9 @@
  
 import React, { useState, useRef } from 'react';
 
-import './SearchForm.css';
 import { Button } from '../../elements/Button';
+
+import './SearchForm.css';
 
 export const SearchForm = () => {
   const [searchValue, setSearchValue] = useState('');
