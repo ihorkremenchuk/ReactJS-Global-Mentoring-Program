@@ -1,0 +1,15 @@
+.genre {
+  padding: 10px;
+  display: inline-block;
+}
+
+.genre ul li {
+  margin: 0 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.genre ul li.active {
+  border-bottom: 1px solid red;
+}
