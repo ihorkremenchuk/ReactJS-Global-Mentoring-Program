@@ -1,4 +1,5 @@
 import {Counter} from '../../components/Counter';
+import { GenreSelect } from '../../components/GenreSelect';
 import { SearchForm } from '../../components/SearchForm';
 
 import './App.css';
@@ -11,6 +12,7 @@ export const App = () => {
       <div className='content'>
         <Counter/>
         <SearchForm/>
+        <GenreSelect genreList={['All', 'Documentary', 'Comedy', 'Horror', 'Crime']} genre={'All'} />
       </div>
     </div>
   );

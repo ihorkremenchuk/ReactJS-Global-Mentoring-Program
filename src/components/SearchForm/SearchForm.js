@@ -32,11 +32,11 @@ export const SearchForm = () => {
         ref={inputRef}
         onKeyDown={onKeyDown}
         onFocus={onFocus}
-    />
+      />
 
-    <Button onClick={onSearch}>Search</Button>
+      <Button onClick={onSearch}>Search</Button>
 
-    <p>Value: {searchValue}</p>
+      <p>Value: {searchValue}</p>
     </div>
   );
 };
