@@ -5,7 +5,7 @@ import { Button } from '../../elements/Button';
 
 import './SearchForm.css';
 
-export const SearchForm = () => {
+export const SearchForm = (props) => {
   const [searchValue, setSearchValue] = useState('');
   const inputRef = useRef(null);
 
@@ -29,7 +29,7 @@ export const SearchForm = () => {
 
       <input
         type="search"
-        placeholder="What do you want to watch?"
+        placeholder={ props.infoText }
         ref={inputRef}
         onKeyDown={onKeyDown}
         onFocus={onFocus}

@@ -1,4 +1,4 @@
-import {Counter} from '../../components/Counter';
+import { Counter } from '../../components/Counter';
 import { GenreSelect } from '../../components/GenreSelect';
 import { SearchForm } from '../../components/SearchForm';
 
@@ -10,8 +10,8 @@ export const App = () => {
       <header className='header'>ReactJS Global Mentoring Program</header>
 
       <div className='content'>
-        <Counter/>
-        <SearchForm/>
+        <Counter value={0} />
+        <SearchForm infoText={"What do you want to watch?"} />
         <GenreSelect genreList={['All', 'Documentary', 'Comedy', 'Horror', 'Crime']} genre={'All'} />
       </div>
     </div>
